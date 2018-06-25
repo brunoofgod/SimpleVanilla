@@ -1,6 +1,6 @@
 # Simple Vanilla
 Simple project javascrit using Vanilla JS
 
-#to run
+# Run
  - npm install
  - npm run dev
