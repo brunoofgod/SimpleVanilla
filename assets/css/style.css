@@ -1,0 +1,18 @@
+.text-center{
+    text-align: center;
+}
+
+.btn-search{
+    margin-left: -5px;
+}
+.hidden{
+    display: none;
+}
+.picture{
+    height: 100px;
+
+
+}
+.ul-data{
+    list-style-type: none;
+}

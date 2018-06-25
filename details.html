@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>brunoofgod Vanilla UI</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body class="bg-light" id="body">
+        <nav class="navbar navbar-dark bg-dark">
+            <span class="navbar-brand mb-0 h1" id="employeeName">{{_employeeModel.Name}}</span>
+        </nav>
+        <main class="container ">
+            <div class="my-3 p-3 bg-white rounded box-shadow">
+                <div class="form-group">
+                    <div class="media text-muted pt-3">
+                        <div class="col-md-3 picture" ><img src="{{_employeeModel.Picture}}" alt="picture"height="150" width="150"></div>
+                        <div class="col-md-9 other-data"> 
+                            <ul class="ul-data" id="employeeData">
+                                <li><b>Full name:</b> {{_employeeModel.Name}}</li>
+                                <li><b>Gender:</b> {{_employeeModel.Gender}}</li>
+                                <li><b>Phone number:</b> {{_employeeModel.Phone}}</li>
+                                <li><b>Company:</b> {{_employeeModel.Company}}</li>
+                                <li><b>Adress:</b> {{_employeeModel.Adress}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="my-3 p-3 bg-white rounded box-shadow">
+                    <div class="form-group">
+                            <span><b>About employee:</b> {{_employeeModel.About}}</span><br/>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="my-3 p-3 bg-white rounded box-shadow col-md-12">
+                    <div class="form-group">
+                        <span><b>Employee was registered in the system:</b> {{_employeeModel.Registered}}</span><br>
+                        {{_employeeModel.LinkMaps}}
+                       <br />
+                       <small>
+                         <a 
+                          href="https://maps.google.com/maps?q={{_employeeModel.Latitude}},{{_employeeModel.Longitude}}&hl=es;z=14&amp;output=embed" 
+                          style="color:#0000FF;text-align:left" 
+                          target="_blank"
+                         >
+                           See map bigger
+                         </a>
+                       </small>
+                    </div>
+                </div>
+            </div>
+            <div class="row text-center my-3 p-3 ">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <button class="btn btn-default" onclick="window.history.back();">back</button>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </main>
+    </body>
+    <script src="./assets/js/models/EmployeeModel.js"  ></script>
+    <script src="./assets/js/services/EmployeeServices.js"  ></script>
+    <script src="./assets/js/controllers/DetailsController.js"  ></script>
+    <script> var _detailsController = new DetailsController(); </script>
+</html>
